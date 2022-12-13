@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hi!</title>
+        <!-- <link rel="stylesheet" href="HTML5_Reset_Stylesheet.css" type="text/css"/> -->
+        <link rel="stylesheet" href="styles4.css" type="text/css"/>
+        <script src="https://kit.fontawesome.com/45bca49838.js" crossorigin="anonymous"></script>
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <!-- Comienzo Nav-Bar -->
+            <nav id="navbar" class="nav">
+                <a href="#" id="logo" class="logo">
+                    <i id="drako" class="fa-brands fa-d-and-d"></i>Logo</a>
+                <button class="nav-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i><!-- icono de 'hamburguesa' -->
+                </button> 
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a href="#welcome_section" class="nav-menu-link">Welcome</a></li>
+                    <li class="nav-menu-item"><a href="#photos" class="nav-menu-link">Photos</a></li>
+                    <li class="nav-menu-item"><a href="#projects" class="nav-menu-link">Projects</a></li>
+                    <li class="nav-menu-item"><a href="#contact" class="nav-menu-link" >Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Fin Nav-Bar -->
+        </header>
+        <article>
+            <section id="welcome_section" class="welcome_section">
+                <h1>Hi! I'm Gonzalo</h1>
+                <p>a future web developed.</p>
+            </section>
+            
+            <section id="photos" class="S2_section">
+                <h2>Photos</h2>
+                <p>I'm a programming student with a photography hobby.</p>
+                <br>
+                <div class="galleryContainer">  
+                    <img class="gallery-img" src="Photos/photo_(4).jpeg" alt="">
+                    <img class="gallery-img" src="Photos/photo_(3).jpeg" alt="">
+                    <img class="gallery-img" src="Photos/photo_(7).jpeg" alt="">
+                </div>
+            </section>
+
+            <section id="projects" class="S3_section project-tile ">
+                <h2 class="project-tile">Projects</h2>
+                <a id="profile-link" href="https://github.com/Raz1945/Portfolio" target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
+                <!-- Terminar, agregar un grid de 2x2. Ver para implemetar un zoom cada vez
+                que se seleccione uno de los "items de los projectos"  -->
+            </section>
+       
+            <section id="contact" class="S4_section">
+                <h3 class="S4_title">Let's work together...</h3>
+                <ul class="s4-contact">
+                    <li class="s4-contact-item"><a class="s4-contact-link" href="https://github.com/Raz1945/Portfolio" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub</a></li>
+                    <li class="s4-contact-item"><a class="s4-contact-link" href="#">
+                        <i class="fa-regular fa-envelope"></i> Mail</a></li>
+                        <!-- Buscar y agregar 'mailto' -->
+                    <li class="s4-contact-item"><a class="s4-contact-link" href="#">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </section>
+
+        </article>
+        <footer>
+
+        </footer>
+    </body>
+</html>

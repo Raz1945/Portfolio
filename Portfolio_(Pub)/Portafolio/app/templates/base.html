@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %} - Portafolio</title>
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://kit.fontawesome.com/45bca49838.js" crossorigin="anonymous"></script>
+        
+        <script src="https://kit.fontawesome.com/45bca49838.js" crossorigin="anonymous"></script>
+
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+        <!-- Comienzo Nav-Bar -->
+        <header class="nav">
+            <div class="logo">GONZALO SANCHEZ</div>
+            <nav id="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="{{ url_for('portfolio.index') }}">Inicio</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="#contacto">Contacto</a></li>
+                    <!-- <li class="nav-menu-item"><a href="#projects" class="nav-menu-link">Projectos</a></li> -->
+                </ul>
+
+                <button class="nav-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i><!-- icono de 'hamburguesa' -->
+                </button>
+            </nav>
+            <!-- Fin Nav-Bar -->
+        </header>
+        <article>
+            <section id="S0">{% block presentacion %}{% endblock %}</section>
+            <section id="S1">{% block seccion_1 %}{% endblock %}</section>
+            <section id="S2">{% block seccion_2 %}{% endblock %}</section>
+            <section id="S3">{% block seccion_3 %}{% endblock %}</section>
+            <section id="S3">{% block seccion_4 %}{% endblock %}</section>
+
+            <section>{% block sentMail %}{% endblock %}</section>
+
+        </article>
+    </body>
+    <footer class="footer">
+        <div class="S5-content">
+            <h3>Tambien puedes seguirme en mis redes sociales:</h3>
+        </div>
+        <div class="social">
+            <ul class="S5-contact">
+                <li class="S5-contact-item">
+                    <a href="#" target="_blank" class="S5-contact-link"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                </li>
+                <li class="S5-contact-item">
+                    <a href="#" target="_blank" class="S5-contact-link"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                </li>
+                <li class="S5-contact-item">
+                    <a href="https://github.com/Raz1945/Portfolio" target="_blank" class="S5-contact-link"><i class="fa-brands fa-github fa-2xl"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</html>

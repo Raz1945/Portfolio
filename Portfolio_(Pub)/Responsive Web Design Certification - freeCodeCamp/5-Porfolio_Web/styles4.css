@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?=Inter:wght@500;600&family=Montserrat:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@500&family=Roboto:wght@500&display=swap');
+
+/* 
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif; texto general
+    font-family: 'Roboto', sans-serif;
+*/
+
+
+:root {
+    --bg-color: #f0eff4;
+    --text-color: #3a3d40;
+
+    --nav-bg-color:#f0eff4;
+    --nav-toggle-color:#ef476f;
+    --nav-menu-toggle-bg-color:#8d99ae; /* al desplegarse*/
+    
+    --nav-text-color:#3a3d40 ;
+    --nav-logo-color:#ef233c;
+}
+/* Estilos globales */
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+
+}
+
+.header{
+    background-color:var(--nav-bg-color);
+    height: 60px; /* es la referencia para el 'line-heigth' */
+    left: 0;
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+
+/* elimino los estilo de los links .nav-link */
+a {
+    color: var(--nav-text-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* -->Comienzo de la barra de Navegacion */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+
+#logo, .logo{
+    color: var(--nav-logo-color);
+    font-size: 30px;
+    font-weight:600;
+    font-family: 'Popins', sans-serif;  
+    line-height: 60px; 
+        /* Para que quede centrado, debe de tener la misma altura que el 'height' del header (osea de la barra de navegacion)*/  
+    padding: 0 40px;
+}
+
+#drako{
+    font-size: 40px;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 60px; 
+        /* Para que quede centrado, debe de tener la misma altura que el 'height' del header*/  
+    width: max-content;
+        /* esto hace que el contenido escrito no se corte al achicar la pantalla */
+}
+    
+.nav-menu-link{
+    border-radius: 3px;
+    padding: 7px 10px;
+
+}
+
+.nav-menu-link:hover{
+    color: #ef233c;
+    transition: 0.3s;   
+}
+
+.nav-menu-link:active{
+    color: #832161;
+    transition: 0.3s;   
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+    color: var(--nav-toggle-color);
+    cursor: pointer;
+    display: none;
+    line-height: 40px; /*referencia para el line-higth del @media*/
+    padding: 0 20px;
+    font-size: 30px;
+}
+
+@media(max-width: 778px) {
+    body {
+        padding-top: 70px   ;
+    }
+
+    .header{
+        height: 50px; /*Referencia del Media- line-higth*/
+    }
+    
+    .logo{
+        font-size: 25px;
+        line-height: 50px; /*Se cambia*/
+        padding: 0 20px;
+    }
+    
+    .nav-menu{
+        align-items: center;
+        background-color: var(--nav-menu-toggle-bg-color);
+        flex-direction:column ;
+        left: 0;
+        margin-right: 20px;
+        opacity: 0.9;
+        padding: 20px 0;
+        position: fixed;
+        top: 50px; /*Se cambia*/
+        width: 100%;
+
+        height:15rem;
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+        
+    .nav-menu-item{
+        line-height: 50px; /*Se cambia*/
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+    .nav-menu_visible{
+        left:0;
+    }
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+}
+
+/* Comienzo de Secciones */
+
+.S2_section > h2,.S3_section > h2{
+    font-size: 3rem;
+}
+.S2_section > p, .S3_section > p{
+    font-size: 1.2rem;
+}
+
+.welcome_section, .S2_section,.S3_section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    /* para medios es 70vh */
+}
+
+/* Presentacion */
+.welcome_section > h1 {
+    color: #212122;
+    font-size: 4.3rem;
+    font-weight: 700;
+}
+.welcome_section > p {
+    color: #ef233c;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Photos */
+.S2_section{    
+    background-color: #3a3d40;
+    color: #f0eff4;
+}
+/* Carrusel de Imagenes de las Habitaciones*/
+.galleryContainer{
+    box-shadow: 2px 2px 8px rgba(0,0,0, 0.2);
+    height: 25rem;
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    width: 40em;
+
+    padding: 24px;
+    gap: 12px;
+    scroll-padding: 24px;
+}
+
+.gallery-img {
+    height: 100%;
+    width: 100%;
+    
+    position: relative left 0;
+    scroll-snap-align: start;
+
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+} 
+
+/* Project */
+.S3_section{
+    background-color: #832161;
+    color: #f0eff4;
+}
+#profile-link {
+    padding: 20px;
+    font-size: 30px;
+    color: #212122;
+    text-shadow:1px 1px 2px rgb(240, 239, 244, 0.6);
+}
+#profile-link:hover{
+    color: #f0eff4;
+    transition: 0.3s;
+}
+
+/* Contact */
+.S4_section{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    font-size: 1.5rem;
+    height: 50vh;
+    width: 100%;
+    /* para medios es 70vh */
+}
+.S4_title{
+    color: #832161;
+    font-size: 2.5rem;
+}
+.s4-contact{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.s4-contact-item{
+    margin: 0 20px;
+    line-height: 60px; 
+        /* Para que quede centrado, debe de tener la misma altura que el 'height' del header*/  
+    width: max-content;
+        /* esto hace que el contenido escrito no se corte al achicar la pantalla */
+}
+.s4-contact-link{
+    border-radius: 3px;
+    padding: 7px 10px;
+}
+
+.s4-contact-link:hover{
+        color: #ef233c;
+        transition: 0.3s;   
+    }
+    
+.s4-contact-link:active{
+        color: #832161;
+        transition: 0.3s;   
+    }

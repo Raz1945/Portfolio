@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+    <!-- Titulo pestaña -->
+{% block title %} Bienvenido {% endblock %}
+
+    <!-- Seccion 0 - Presentacion  -->
+{% block presentacion %}
+<div class="welcome_section">
+    <h1>Bienvenido!</h1>
+    <p>Al Proyecto Porfolio</p>  
+</div>
+{% endblock %}
+
+    <!-- Seccion 1 -->
+{% block seccion_1 %}
+    {% include 'portfolio/section-one.html' %}
+{% endblock %}
+
+    <!-- Seccion 2 -->
+{% block seccion_2 %}
+    {% include 'portfolio/section-two.html' %}
+{% endblock %}
+
+    <!-- Seccion 3 -->
+{% block seccion_3 %}
+    {% include 'portfolio/section-three.html' %}
+{% endblock %}
+
+    <!-- Seccion 4 -->
+{% block seccion_4 %}
+    {% include 'portfolio/section-four.html' %}
+{% endblock %}

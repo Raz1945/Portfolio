@@ -1,0 +1,20 @@
+<div class="section_4">
+    <div class="pad">
+        <div class="flex-content-4">
+            <div class="S4-left">              
+                <h2>Trabajemos juntos  <i class="fa-solid fa-handshake"></i></h2>
+                <p>Dare mi mejor esfuerzo! para aprender, aportar valor y que tengamos una fructifera relacion a largo plazo.</p>
+            </div>
+            
+            <div id="contacto" class="S4-right">
+                <form action="{{ url_for('portfolio.mail') }}" class="contact-form" method="post">
+                    <input name="name" placeholder="Nombre" required />
+                    <input name="email" placeholder="Correo" type="email" required />
+                    
+                    <textarea name="message" placeholder="Mensaje" required minlength="10"></textarea>
+                    <button class="btn full-width">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

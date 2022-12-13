@@ -1,0 +1,374 @@
+/* importar algun tipo de Letra */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Asap&display=swap);
+
+:root {
+    --page-bg-color: #faf9f9;
+    --nav-bg-color:linear-gradient(225deg,#94d2bd,#0a9396,#005f73);
+    --spring-bg-color:linear-gradient(to left,#94d2bd,#0a9396,#005f73);
+    --nav-btn-color:#16697a;
+    --nav-btn-color_active:#253439;
+
+    --nav-toggle-color:#faf9f9;
+    --nav-menu-toggle-bg-color:#d8f3dc;
+    --nav-text-color:#353535;
+
+    --text-header-color: #faf9f9;
+    --text-color:#353535;
+    --text-style-t1:'Asap', sans-serif;
+    --text-style-t2:"Source Sans Pro",sans-serif;
+
+}
+
+/* Estilos globales */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--page-bg-color);
+    color: var(--text-color);
+    font-family:var(--text-style-t2);
+    font-size: 16px;
+}
+
+
+/* --> Comienzo de la barra de Navegacion */
+.header{
+    background:var(--spring-bg-color);
+    font-family:var(--text-style-t2);
+    height: 3.75rem; /* es la referencia para el 'line-heigth' */
+    left: 0;
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+.header > .nav{
+    display: flex;
+    justify-content:space-between ; 
+    align-items: center; 
+        /*al estar centrada limita el tamaño del logo1*/
+    margin: 0 0 auto;
+    max-height:inherit;
+    max-width: 100%;
+        /* Ancho maximo de la web 992px...*/
+}
+
+/* logo de la barra de menu */
+.logo-menu{
+    width: 4.8rem;
+    height: 100%;
+    /* Determino las dimensiones finales que va a tener el logo, el cual esta limitado por el aling-item */
+}
+
+.header a{
+    color: var(--nav-text-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav > .nav-menu{
+    max-height: inherit; /* toma como referencia el valor del elemento padre*/
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 1.09rem;
+    margin: 0 25px;
+    line-height: 3.75rem; 
+        /* Para que quede centrado, debe de tener la misma altura que el 'height' del header*/  
+    text-transform: uppercase;
+    width: max-content;
+        /* esto hace que el contenido escrito no se corte al achicar la pantalla */
+}
+    
+.nav-menu-link{
+    padding: 10px 0 10px;
+}
+
+.nav-menu-link:hover{
+    color: #d9ed92;
+    text-shadow: 0.5px 0.5px 0px rgb(40, 75, 99, 0.3);
+    text-decoration: underline 1px #d9ed92;
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+    color: var(--nav-toggle-color);
+    cursor: pointer;
+    display: none;
+    line-height: 60px; /*referencia para la @media*/
+    padding: 0 20px;
+    font-size: 30px;
+}
+
+@media(max-width: 778px) {
+
+    .header{
+        height: 60px;
+    }
+    
+    .logo-menu{
+        padding: 5px;
+        transition: 0.3s;
+    }
+    
+    .nav-menu{
+        align-items: center;
+        background-color: var(--nav-menu-toggle-bg-color);
+        flex-direction:column ;
+        left: 0;
+        margin-right: 20px;
+        opacity: 0.90;
+        padding: 10px 0;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+
+        height: fit-content;
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .nav-menu-item{
+        line-height: 50px; 
+    }
+    .nav-menu-link:hover{
+        font-weight: 700;
+        color: #16697a;
+        transition: 0.3s;   
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+    .nav-menu_visible{
+        left:0;
+    }
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+}
+/* --> Fin de la barra de Navegacion */
+
+
+#home-page-logo {
+    margin-top: 55px;
+
+}
+/* Logo + Titulo */
+.logoCentral {
+    align-items: center;
+    background:var(--spring-bg-color);
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.logoCentral > #imgCentral {
+    height:100%;
+    max-height: 80px;
+}
+.logoCentral > h1 {
+    color:#faf9f9;
+    font-family: var(--text-style-t1);
+    font-size: 5rem;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 2px rgba(0,0,0, 0.2);
+}
+
+/* Carrusel de Imagenes */
+.carrusel-portada {
+    box-shadow: 2px 2px 8px rgba(0,0,0, 0.2);
+    height: 95vh;
+    width: 100%;
+
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+    overflow: auto;
+    scroll-padding: 20px;
+    scroll-snap-type: x mandatory;
+}
+
+.carrusel-portada >.img-portada {
+    height: 100%;
+    position: relative left 0;
+    width: 100%;
+
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+/* Seccion Rooms */
+#rooms-section{
+    margin: 50px 20% 20px 20%;
+    padding-top: 50px; /*altura de los titulos*/
+}
+
+#rooms-section > h2{
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgba(0,0,0, 0.2)
+}
+
+#rooms-section > p {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#roomTypes {
+    font-family: var(--text-style-t2);
+    padding-top: 50px;
+}
+
+#item_1,#item_2,#item_3 {
+    padding-top: 50px;
+}
+
+#roomTypes h3{
+    font-size: 40px;
+    text-align: center;
+}
+
+#roomTypes p {
+    font-size: 20px;
+    text-align: center;
+    text-decoration: overline;
+}
+#roomTypes ul {
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    list-style: disc;
+    list-style-position: inside;
+    width: 37rem;
+    
+}
+
+/* Carrusel de Imagenes de las Habitaciones*/
+.galleryContainer{
+    box-shadow: 2px 2px 8px rgba(0,0,0, 0.2);
+    height: 25rem;
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    width: 44rem;
+
+    padding: 24px;
+    gap: 12px;
+    scroll-padding: 24px;
+}
+
+.gallery-img {
+    height: 100%;
+    width: 100%;
+    
+    position: relative left 0;
+    scroll-snap-align: start;
+
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+} 
+
+
+/* Booking - lo hago separado pero en realida comparten codigo 
+con room-section*/
+#booking-section{
+    margin: 50px 20% 20px 20%;
+    padding-top: 40px; /*altura de los titulos*/
+}
+
+#booking-section > div > h2{
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgba(0,0,0, 0.2)
+}
+
+@media(max-width: 778px) {
+    #home-page-logo {
+        margin-top:60px;
+    
+    }
+    /* Logo + Titulo */
+       
+    .logoCentral > #imgCentral {
+        height:100%;
+        max-height: 80px;
+    }
+    .logoCentral > h1 {
+        font-size: 4rem;
+    }
+    
+    /* Carrusel de Imagenes */
+    .carrusel-portada {
+        height: 24rem;
+    }
+        
+    /* Seccion Rooms */
+    #rooms-section{
+        padding-top: 50px; /*altura de los titulos*/
+    }
+    
+    #rooms-section > h2{
+        font-size: 55px;
+    }
+        
+    #roomTypes {
+        font-family: var(--text-style-t2);
+        padding-top: 50px;
+    }
+    
+    #item_1,#item_2,#item_3 {
+        padding-top: 50px;
+    }
+    
+    #roomTypes h3{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    #roomTypes p {
+        font-size: 20px;
+        text-align: center;
+        text-decoration: overline;
+    }
+    #roomTypes ul {
+        width: 25rem;       
+    }
+    
+    /* Carrusel de Imagenes de las Habitaciones*/
+    .galleryContainer{
+        height: 20rem;
+        justify-content: left;
+        width: 25rem;
+    }
+    
+    .gallery-img {
+        height: 100%;
+        width: 100%;
+    } 
+    
+    
+    /* Booking - lo hago separado pero en realida comparten codigo 
+    con room-section*/
+    #booking-section{
+        margin: 50px 20% 20px 20%;
+        padding-top: 40px; /*altura de los titulos*/
+    }
+    
+    #booking-section > div > h2{
+        font-size: 60px;
+        text-align: center;
+        text-shadow: 0px 2px 2px rgba(0,0,0, 0.2)
+    }
+
+}

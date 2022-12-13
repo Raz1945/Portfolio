@@ -1,0 +1,5 @@
+Resolver el centrado de los titutlos al pasar a modo celu
+
+carrusel continuo de imagenes en la portada
+
+terminar la parte de la Reserva

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@100;400&family=Source+Sans+Pro&display=swap');
+/* 
+font-family: 'Roboto Mono', monospace;
+-->   font-family: 'Roboto', sans-serif;
+-->   font-family: 'Source Sans Pro', sans-serif;
+*/
+:root {
+    --background-Code: #5fa8d3;
+    --backgrounColor:#f8f9fa ;
+    --background-navbar-color:linear-gradient(to bottom,#e4b363, #fdf0d5);
+    --text-content: #252422;
+    --text-navbar-color: #252422;
+}
+
+html, body{
+    background: var(--backgrounColor);
+    color: var(--text-content);    
+    margin: 0;
+}
+
+
+/* --> Comienzo del estilo de la Barra de Navegacion 'NavBar' */
+#navbar {
+    background: var(--background-navbar-color);
+    color: var(--text-navbar-color);
+    font-family:'Source Sans Pro', sans-serif;;
+    height: 100%;
+
+    min-width: 12.5rem;
+    position: fixed;
+    width: 14rem;
+}
+
+#navbar header{
+    background-color:#780000;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.30rem;
+    padding: 0.94rem 0.313rem;
+    text-align: center;
+    text-shadow:0px 2px 2px rgba(0,0,0, 0.2);
+}
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* overflow-y: visible; */
+    /* overflow-x: hidden  ; */
+}
+
+#navbar ul li {
+    border-top: 1px solid;
+    width: 100%;
+}
+#navbar ul li:last-child{ border-bottom: 2px solid;}
+
+/* Estilo de los links */
+#navbar a {
+    color: var(--text-navbar-color);
+    cursor: pointer;
+    display: block;
+    font-size: 1.063rem;
+    text-align: right;
+    padding: 0.625rem 0.625rem;
+    text-decoration: none;
+}
+
+#navbar a:hover{
+    background-color: #c1121f;
+    color: #edf2f4;
+}
+/* Fin de la Barra de Navegacion <-- */
+
+/* --> Comienzo del estilo del contenido */
+#main-doc li {
+    margin: 0.938rem 0 0 1.25rem;
+}
+#main-doc header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    padding-top: 0.625rem;
+}
+
+ #main-doc{
+    /* background: var(--backgrounColor); */
+    /* color: var(--text-content); */
+    font-family:'Source Sans Pro', sans-serif;;
+    line-height: 1.4;
+    padding-right: 0.9rem;
+    margin-left: 16rem;
+    position: absolute;
+}
+code {
+    background-color: var(--background-Code);
+    border-radius: 3px;
+    display: block;
+    line-height: 2;
+    margin: 0.5rem 0;
+    position: relative;
+    padding: 0.5rem;
+}
+/* --> Fin del estilo del contenido */
+
+/* Responsive media  */
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+    #navbar ul {
+      border: 1px solid;
+      height: 12.5rem;
+    }
+  
+    #navbar {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-height: 15.3rem;
+      border: none;
+      border-bottom: 2px solid;
+    }
+  
+    #main-doc {
+      position: relative;
+      margin-left: 0px;
+      margin-top: 15.3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    #main-doc {
+      margin-left: -10px;
+    }
+  
+    code {
+      margin-left: -20px;
+      width: 100%;
+      padding: 15px;
+      padding-left: 10px;
+      padding-right: 45px;
+      min-width: 233px;
+    }
+  }
+  

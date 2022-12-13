@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@1,600&family=Raleway:wght@700&family=Roboto+Condensed&display=swap');
+
+/*  font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif; */
+
+
+:root{
+    --text-T: #94d2bd;
+
+    --backG-box-1:#94d2bd ;
+    --backG-box-2:#e9d8a6 ;
+    --text-box:#000;
+
+    --bordes:#168aad;
+    --btn:#212529;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: url(fondo2.jpg) scroll; 
+    color: var(--text-T);   
+    margin: 0;
+    padding: 0; }
+
+        /* --> Caja cuyo contenido es el Titulo + formulario */
+.container { width: 100%; }
+
+
+        /* --> Titulo y descripcion */
+/* header{} */
+.text-center, .d-text-center{  
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.3);}
+
+#title{ font-size: 4rem; margin: 0.5rem 0 0.5rem 0;}
+
+#description{ margin: 0.5rem 0 1.8rem 0; }
+
+
+        /* --> FORMULARIO */
+#survey-form{
+    color: var(--text-box);
+    background:linear-gradient(var(--backG-box-1),var(--backG-box-2));
+    width: 100%;   
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1.5px var(--bordes);
+    border-radius: 0.25rem;
+}
+
+        /* --> input-container = form-contrl */
+.form-control {
+    color: var(--text-box);
+    width: 100%;
+    height: 2rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 0.5rem;
+    border: solid 1.2px  var(--bordes);
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(22, 138, 173,0.4);
+}
+
+.from-group label{
+    color: var(--text-box);
+    margin-bottom: 0.5rem;}
+
+.from-group input{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit    ;
+    width: 90%;
+    height: 30px;
+    margin: 0;
+}
+
+.form-group .input-radio{
+    display: inline-block;
+}
+.form-group label {
+    display:flex;
+    align-items: center;
+}
+
+
+.input-textarea {
+    min-height: 120px;
+    width: 95.2%;
+    padding: 0.3rem 0.75rem;
+    resize: vertical;
+    border: solid 1.2px  var(--bordes);
+    border-radius: 0.25rem;
+}
+         /* Boton */
+.submit-btn {
+    background-color: var(--btn);
+    color: var(--backG-box-2);
+    padding: 0.625rem;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+ }
+.submit-btn:hover{background-color:var(--bordes);}
+
+/* IMPORTANTE!! */
+/* Para ver que afectar cada cosa se puede cambiar el color del fondo o el de 
+las letras a un rojo (por ejemplo) y asi se distingue que es lo que se esta 
+modificando */

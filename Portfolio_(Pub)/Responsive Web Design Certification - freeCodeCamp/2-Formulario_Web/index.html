@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+        <!-- Si quisiera incluir la hoja de Reset HTML5, tendria que ser antes de todas
+        las demas reglas. -->
+        <!-- <link href="HTML5_Reset_Stylesheet.css" rel="stylesheet"/> -->
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1 id="title" class="text-center">freeCodeCamp - Form</h1>
+                <p id="description" class="d-text-center">Thank you for taking the time to help us improve the platform</p>
+            </header>
+            <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input id="name" class="form-control" type="text" name="name" placeholder="Enter your name" required="" >
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input id="email" class="form-control" type="email" name="email" placeholder="Enter your email" required=" " >
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age (Opcional)</label>
+                <input id="number" name="number" class="form-control" type="number" min="18" max="99" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <!-- Para que quede debajo el selector, uso un parafo en vez de un label. -->
+                <p>Which option best describes your current role?</p> 
+                <select id="dropdown" class="form-control" name="role" required>
+                    <!-- El primer selector no tendra valores para que quede como 'titulo' del selector mismo. -->
+                    <option disabled="" selected="" value="">Select current role</option>    
+                    <option  value="student">Student</option>    
+                    <option  value="Job">Full Time Job</option>    
+                    <option  value="learner">Full Time Learner</option>    
+                    <option  value="preferNot">Prefer not to say</option>    
+                    <option  value="other">Other</option>    
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <!-- checked="", de esta manera quedara seleccionada de forma predeterminada digamos la opcion. -->
+                <label><input class="input-radio" type="radio" name="user-recomend" value="definitely" checked="" >Definitely</label>
+                <label><input class="input-radio" type="radio" name="user-recomend" value="maybe">Maybe</label>
+                <label><input class="input-radio" type="radio" name="user-recomend" value="not-sure">Not sure</label>
+            </div>
+            <div class="form-group">
+                <p>What is your favorite feature of freeCodeCamp?</p>
+                <select id="dropdown" class="form-control" name="mostLike" required="">
+                <!-- El primer selector no tendra valores para que quede como 'titulo' del selector mismo. -->
+                <option disabled="" selected="" value="">Select an option</option>
+                <option value="challenger">Challenger</option>
+                <option value="prejects">Projects</option>
+                <option value="community">Community</option>
+                <option value="source">Open Source</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>What would you like to see improved? (Check all that apply)</p>
+                <label> 
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="front-end projects">
+                    Front-end Projects 
+                </label>
+                <label>
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="back-end projects"> 
+                    Back-end Projects
+                </label>
+                <label>
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="data visualization"> 
+                    Data Visualization
+                </label>
+                <label>
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="open source community"> 
+                    Open Source Community
+                </label>
+                <label>
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="gitter help rooms"> 
+                    Gitter help rooms
+                </label>
+                <label> 
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="videos"> 
+                    Videos
+                </label>
+                <label>
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="city meetups">
+                    City Meetups
+                </label>
+                <label>
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="wiki"> 
+                    Wiki
+                </label>
+                <label>
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="forum">
+                    Forum
+                </label>
+                <label>
+                    <input class="input-checkbox" type="checkbox" name="prefer" value="additional courses"> 
+                    Additional Courses
+                </label>
+            </div>         
+            <div class="form-group">
+                <p>Any Comments or sugestions?</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="form-group">
+                <button id="submit" class="submit-btn" type="submit" >Submit</button>
+            </div>
+            </form>
+        </div>
+    </body>
+</html>
